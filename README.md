@@ -11,7 +11,8 @@
   <img src="https://i.pinimg.com/736x/f3/64/7a/f3647ab910a201ec5a429481b1ac825a.jpg" alt="Web Development Showcase Banner" width="1200">
 </p>
 
-RiceVision Lab is a curated workspace exploring automated rice variety classification using modern computer-vision techniques. This project analyzes two well-known rice datasets and compares six powerful CNN architectures to understand how models behave on both **single-grain** and **multi-grain** images.
+RiceVision Lab is a curated workspace exploring automated rice variety classification using modern computer-vision techniques. This project was created by me and my team, which analyzes two well-known rice datasets and compares six powerful CNN architectures to understand how models behave on both **single-grain** and **multi-grain** images.
+
 ---
 
 ## 🎯 Project Goals
@@ -24,11 +25,11 @@ RiceVision Lab is a curated workspace exploring automated rice variety classific
 
 ## 📁 Datasets Used
 
-### **1. Aruzz Dataset (20 varieties — single grain images)**  
+### **1. Aruzz Dataset (20 varieties - single grain images)**  
 A large-scale rice dataset featuring high-quality single-grain images.  
 👉 [Mendeley - Aruzz](https://data.mendeley.com/datasets/3mn9843tz2/1)
 
-### **2. BD Rice Dataset (8 categories — multiple grains per image)**  
+### **2. BD Rice Dataset (8 categories - multiple grains per image)**  
 Images captured from mixed environments with visible clusters of rice grains.  
 👉 [Mendeley - BD Rice](https://data.mendeley.com/datasets/y4gywztksm/1)
   
@@ -51,10 +52,30 @@ Each model was trained using a unified PyTorch pipeline with identical hyperpara
 
 ## 📓 Repository Contents
 
-This repository is intentionally kept clean and lightweight. To help learners focus on the **core training workflow**, only **one notebook** is included:
+This repository is intentionally kept clean and lightweight. To help learners focus on the **core workflow understanding**, only **demonstration** is included:
 
 ### ✔ ** Website Showcase**  
-A polished, easy-to-follow training template covering the full pipeline — preprocessing, augmentation, model training, evaluation, and Grad-CAM visualization. Learners can easily adapt this notebook for both the Aruzz and BDRice datasets, or extend it with new models.
+
+- Open the 🌾 [Rice Vision](https://rice-vision.streamlit.app/) web application in your browser.
+  
+- Select the Grain Type from the sidebar:
+  - Single Grain (Aruzz) → for single rice grain images
+  - Multi Grain (BDRice) → for multi-grain images
+- Choose a model architecture:
+  - EfficientNet-V2-S
+  - DenseNet-201
+  - ResNeXt50-32×4d
+- Upload one or more rice images using the Upload image(s) option.
+  - Supported formats: .jpg, .png, .jpeg
+- For each uploaded image, the application shows:
+  - Image name and preview
+  - Predicted rice variety
+  - Confidence score
+  - Top 3 predictions displayed as confidence bars
+- A low-confidence warning is displayed if the prediction confidence is below the threshold.
+- Enable Grad-CAM (optional) to visualize image regions influencing the prediction.
+- Multiple images are processed sequentially for batch evaluation.
+
 
 ### ✔ **Visualizations Included**
 The repository includes all essential visual outputs generated during the experiments, providing a clear understanding of model behavior:
@@ -63,11 +84,10 @@ The repository includes all essential visual outputs generated during the experi
 - **Confusion Matrices**  
 - **ROC-AUC & Precision–Recall Curves**  
 - **Grad-CAM Heatmaps** (Aruzz & BDRice)
+- **Both Dataset Sample Image's**
 
-These visuals highlight learning patterns, model stability, and the specific grain features each model focuses on — making the entire workflow transparent and easy to interpret.
+These visuals highlight learning patterns, model stability, and the specific grain features each model focuses on - making the entire workflow transparent and easy to interpret.
 
----
-> 📌 *The original Aruzz notebook and all BDRice notebooks (original & augmented) are not included.* Their workflows are identical to the template provided. This encourages hands-on experimentation rather than uploading repetitive files.
 ---
 
 
@@ -79,10 +99,18 @@ These visuals highlight learning patterns, model stability, and the specific gra
 - Grad-CAM confirmed meaningful feature focus (grain edges, texture patterns)  
 - Augmentation significantly improved generalization, especially for BD Rice
 
+| Dataset ↓ / Model →  | ResNeXt50 | DenseNet201 | EfficientNet-V2-S | NASNet-Large | GhostNet   | Xception |
+| -------------------- | --------- | ----------- | ----------------- | ------------ | ---------- | -------- |
+| **Aruzz Original**   | 🟡 Good   | 🟡 Good     | 🟢 Best           | 🟠 Average   | 🔴 Weak    | 🟡 Good  |
+| **Aruzz Augmented**  | 🟢 Best   | 🟢 Best     | 🟢 Best           | 🟡 Good      | 🟠 Average | 🟢 Best  |
+| **BDRice Original**  | 🟡 Good   | 🟡 Good     | 🟢 Best           | 🟠 Average   | 🔴 Weak    | 🟡 Good  |
+| **BDRice Augmented** | 🟢 Best   | 🟢 Best     | 🟢 Best           | 🟡 Good      | 🟠 Average | 🟢 Best  |
+
+
 ---
 
-## 📦 Trained Models & Full Research Report  
-To keep the repository light and accessible, trained model files (`.pth`) and the complete PDF report are not included here.
+## 📦 Other Resources
+To ensure the repository remains lightweight and easy to demonstrate, training notebooks, trained model checkpoints (`.pth`), and the full PDF report are intentionally omitted.
 
 📬 You can request them at: [contact me](mailto:heyneeddev@gmail.com)
 
