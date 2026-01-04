@@ -76,6 +76,11 @@ This repository is intentionally kept clean and lightweight. To help learners fo
 - Enable Grad-CAM (optional) to visualize image regions influencing the prediction.
 - Multiple images are processed sequentially for batch evaluation.
 
+⚠️ Important Display Notice
+
+This app is styled for Dark mode. Light theme may hide some UI elements.
+Change via [Right Side ⋮ → Settings → App Theme → Dark].
+
 
 ### ✔ **Visualizations Included**
 The repository includes all essential visual outputs generated during the experiments, providing a clear understanding of model behavior:
