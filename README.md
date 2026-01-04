@@ -12,9 +12,6 @@
 </p>
 
 RiceVision Lab is a curated workspace exploring automated rice variety classification using modern computer-vision techniques. This project analyzes two well-known rice datasets and compares six powerful CNN architectures to understand how models behave on both **single-grain** and **multi-grain** images.
-
-The repo includes structured training notebooks, performance graphs, Grad-CAM heatmaps, and a clean template for anyone who wants to explore fine-grained classification research.
-
 ---
 
 ## 🎯 Project Goals
@@ -56,7 +53,7 @@ Each model was trained using a unified PyTorch pipeline with identical hyperpara
 
 This repository is intentionally kept clean and lightweight. To help learners focus on the **core training workflow**, only **one notebook** is included:
 
-### ✔ **Aruzz (Augmented) Notebook – Template Version**  
+### ✔ ** Website Showcase**  
 A polished, easy-to-follow training template covering the full pipeline — preprocessing, augmentation, model training, evaluation, and Grad-CAM visualization. Learners can easily adapt this notebook for both the Aruzz and BDRice datasets, or extend it with new models.
 
 ### ✔ **Visualizations Included**
