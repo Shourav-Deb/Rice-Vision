@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://i.pinimg.com/736x/f3/64/7a/f3647ab910a201ec5a429481b1ac825a.jpg" alt="Web Development Showcase Banner" width="1200">
+  <img src="https://i.pinimg.com/originals/6b/db/4b/6bdb4bba3f0379b30b9ed90294d5146e.png" alt="Web Development Showcase Banner" width="1200">
 </p>
 
 RiceVision Lab is a curated workspace exploring automated rice variety classification using modern computer-vision techniques. This project was created by me and my team, which analyzes two well-known rice datasets and compares six powerful CNN architectures to understand how models behave on both **single-grain** and **multi-grain** images.
