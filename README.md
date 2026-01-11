@@ -119,11 +119,4 @@ To ensure the repository remains lightweight and easy to demonstrate, training n
 
 📬 You can request them at: [contact me](mailto:heyneeddev@gmail.com)
 
-## 🚀 Getting Started
-
-Clone the repo:
-```bash
-git clone https://github.com/Shourav-Deb/Rice-Vision
-cd Rice-Vision
-```
 ---
